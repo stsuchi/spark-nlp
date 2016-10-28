@@ -1,5 +1,5 @@
 val path = "/Users/shirotsuchiya/Documents/spark_nlp/20news-bydate-train/*"
-val rdd = sc.wholeTextFiles(path)
+val rdd = sc.wholeTextFiles(path,4)
 val text = rdd.map { case (file, text) => text}
 println(text.count)
 
